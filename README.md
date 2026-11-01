@@ -1,2 +1,25 @@
-# Brain-calculating
-For everyone who wants to learn and practice fast math calculating by some famous methods like Trachtenberg and .... From easy to difficult.
+# ریاضی‌باز | RiaziBaz — Android (WebView) project
+
+## ساخت APK بدون نصب Android Studio (پیشنهادی)
+1. در github.com یک مخزن (Repository) خالی بسازید، مثلاً `riazibaz`.
+2. محتویات همین پوشه را در ریشهٔ مخزن آپلود کنید (Add file → Upload files). پوشهٔ `.github` را هم حتماً آپلود کنید.
+3. تب **Actions** را باز کنید؛ ساخت «Build Android APK» خودکار شروع می‌شود (یا Run workflow را بزنید).
+4. پس از ۳ تا ۵ دقیقه، در پایین صفحهٔ اجرا بخش **Artifacts** فایل `RiaziBaz-debug-apk` را دانلود کنید، از حالت فشرده خارج کنید و `app-debug.apk` را روی گوشی نصب کنید (اجازهٔ «نصب از منبع ناشناس» لازم است).
+
+## ساخت با Android Studio
+Open → همین پوشه → صبر برای Sync → Run ▶.
+
+## ویرایش برنامه
+تمام برنامه یک فایل است: `app/src/main/assets/index.html`. آن را عوض کنید و دوباره Push کنید.
+فونت‌ها از Google Fonts بارگذاری می‌شوند؛ بدون اینترنت، فونت‌های سیستم جایگزین می‌شوند (برنامه همچنان کار می‌کند).
+
+## انتشار در Google Play
+یک keystore بسازید، `assembleRelease` را با امضا اجرا کنید و خروجی AAB را بسازید (`bundleRelease`).
+
+## روش سبک‌تر: PWA
+پوشهٔ `pwa/` را روی GitHub Pages منتشر کنید؛ در Chrome گوشی «Add to Home screen / نصب برنامه» را بزنید.
+
+## فونت‌ها و حالت آفلاین
+مرحلهٔ «Download fonts» در workflow فونت‌های Vazirmatn و Nunito را هنگام ساخت دانلود و داخل APK می‌گذارد؛ پس برنامه کاملاً آفلاین اجرا می‌شود.
+اگر ساخت را روی کامپیوتر خودتان انجام می‌دهید، یک‌بار `sh get-fonts.sh` را اجرا کنید (اینترنت لازم است).
+اگر دانلود فونت شکست بخورد، ساخت ادامه می‌یابد و فونت‌های سیستم استفاده می‌شوند.
